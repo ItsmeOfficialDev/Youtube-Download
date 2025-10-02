@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeFetch - Open Source YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-cloud-download-alt"></i>
+                <h1>TubeFetch</h1>
+            </div>
+            <p class="tagline">Transparent • Open Source • No Ads • Secure</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <h2>Download YouTube Videos Responsibly</h2>
+                <p class="description">Enter a YouTube URL to fetch available download options</p>
+                
+                <div class="url-input-container">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="youtubeUrl" 
+                            placeholder="https://www.youtube.com/watch?v=..." 
+                            class="url-input"
+                        >
+                        <button id="fetchBtn" class="fetch-btn">
+                            <span class="btn-text">Fetch Video</span>
+                            <div class="btn-loader hidden">
+                                <div class="loader"></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Preview Section -->
+            <section id="videoPreview" class="video-preview hidden">
+                <div class="preview-card">
+                    <div class="thumbnail-wrapper">
+                        <img id="previewThumbnail" class="thumbnail" alt="Video thumbnail">
+                        <div class="duration-badge" id="videoDuration">--:--</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 id="previewTitle">Video Title</h3>
+                        <p id="previewChannel" class="channel-name">Channel Name</p>
+                        <div class="video-stats">
+                            <span class="stat" id="previewViews">--- views</span>
+                            <span class="stat" id="previewUploadDate">---</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Options Section -->
+            <section id="downloadSection" class="download-section hidden">
+                <h3>Available Download Options</h3>
+                <div class="quality-grid" id="qualityGrid">
+                    <!-- Quality buttons will be dynamically inserted here -->
+                </div>
+                
+                <!-- Progress Section -->
+                <div id="progressSection" class="progress-section hidden">
+                    <div class="progress-header">
+                        <span id="progressStatus">Preparing download...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="download-info">
+                        <span id="downloadSpeed">--</span>
+                        <span id="timeRemaining">--</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legal Disclaimer -->
+            <section class="legal-section">
+                <div class="legal-card">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Legal Disclaimer</h4>
+                    <div class="disclaimer-content">
+                        <p>This tool is provided for educational and fair-use purposes only. Users are responsible for:</p>
+                        <ul>
+                            <li>Complying with YouTube's Terms of Service</li>
+                            <li>Respecting copyright laws and creator rights</li>
+                            <li>Only downloading content you have permission to use</li>
+                            <li>Supporting creators through official channels when possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="opensource-info">
+                    <i class="fab fa-github"></i>
+                    <span>100% Open Source - No Hidden Code</span>
+                </div>
+                <p>&copy; 2024 TubeFetch. Built with transparency and community in mind.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
